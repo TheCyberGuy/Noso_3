@@ -1,0 +1,146 @@
+doctype html
+html(lang="hu")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="Megbizhato villanyszerelsi munkak")
+        link(rel="icon", type="image/png" href="./assets/noso_logo2-remove.png")
+        title NoSo 
+
+        //- fontawesome
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+        //- bootsrap
+        link(rel="stylesheet", href="./css/bootstrap.css")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js")
+
+        //-  GSAP
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js") 
+        //- 
+        link(rel="stylesheet", href="./css/style.css")
+        script(src="./js/animation.js" defer) 
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+            .container
+                a.navbar-brand(href='#')
+                    img(src="./assets/noso_logo2-remove.png", width=64, height=64 alt="")
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    .container.d-flex.flex-row.justify-content-lg-end
+                        ul.navbar-nav
+                            li.nav-item#navs
+                                a.nav-link.active(aria-current='page' href='#about') Rolunk
+                            li.nav-item#navs
+                                a.nav-link.active(href='#foglal') Tevekenysegeink
+                            li.nav-item#navs
+                                a.nav-link.active(href='#footer') Kontakt
+        .container-fluid.d-flex.align-items-center.justify-content-center-d-column#about
+            .container-fluid.d-flex.flex-row.justify-content-evenly.d-sm-column#Card
+                //- .container
+                .container.text-center#textwrapper
+                    h1.text-light.text-sm-center.text-lg-start.text-wrap#shortText
+                        .div.d-flex.flex-column.flex-lg-row.align-items-bottom
+                            span.me-2 Professzionalis
+                            div.d-flex.justify-content-center.text-nowrap#title
+                                div#wrapper
+                                    h1.i-item Villanyszerelesi
+                                    h1.i-item.i-item-2.w-100 Gepeszeti
+                                    //- h1.i-item Vizszerelesi
+                        | megoldasok a 
+                        span No
+                        span#So So
+                        | tol
+                        p#aboutText A Noso Kft. egy magyarországi villanyszerelő cég. Szolgáltatásaink széles skáláját kínáljuk, az ipari és lakossági szerelésektől kezdve. Mindig készen állunk egy új kihívásra, így ha olyan projektje van, amihez szükség van a szakértelmünkre, ne habozzon, vegye fel velünk a kapcsolatot!
+                    .container-fluid.d-flex.mt-3.px-0.d-flex.flex-row.justify-content-center
+                        button.btn#btnFoglal(type='button')
+                            a(href="#foglal") Mivel Foglalkozunk
+                        button.btn#btnRef(type='button')
+                            a(href="#gallery") Refernciak
+        .container-fluid.text-dark#foglal
+            h2.text-center.mt-3#foglText Mivel foglalkozunk
+            //- hr.hr1
+            .container-fluid.d-flex.flex-lg-row.flex-column.justify-content-evenly.align-center
+                .container.mt-5.text-center#neuro
+                    i.fa-solid.fa-bolt.fa-2xl.mt-4#foglIcon
+                    h3.my-3 Villanyszereles
+                    #carouselExampleFade.carousel.slide.carousel-fade(data-bs-ride='carousel')
+                        .carousel-inner
+                            .carousel-item.active
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80' alt='...')
+                            .carousel-item
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1097&q=80' alt='...')
+                            .carousel-item
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1581972327480-e3764d31e5e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80' alt='...')
+                    button.btn.my-2#Button(type='button')
+                        a#fogA(href="./villany.html") Tudjon meg tobbet 
+                .container.mt-5.text-center#neuro
+                    i.fa-solid.fa-wrench.fa-2xl.mt-4#foglIcon
+                    h3.my-3 Gepeszet
+                    #carouselExampleFade.carousel.slide.carousel-fade(data-bs-ride='carousel')
+                        .carousel-inner
+                            .carousel-item.active
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80' alt='...')
+                            .carousel-item
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1097&q=80' alt='...')
+                            .carousel-item
+                                img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1581972327480-e3764d31e5e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80' alt='...')
+                    button.btn.my-2#Button(type='button')
+                        a#fogA(href="./gepeszet.html") Tudjon meg tobbet 
+                //- .container.mt-5.text-center#neuro
+                //-     i.fa-solid.fa-bolt.fa-2xl.mt-4#foglIcon
+                //-     h3.my-3 Vizszereles
+                //-     #carouselExampleFade.carousel.slide.carousel-fade(data-bs-ride='carousel')
+                //-         .carousel-inner
+                //-             .carousel-item.active
+                //-                 img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80' alt='...')
+                //-             .carousel-item
+                //-                 img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1097&q=80' alt='...')
+                //-             .carousel-item
+                //-                 img#carouselImg.d-block.w-100(src='https://images.unsplash.com/photo-1581972327480-e3764d31e5e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80' alt='...')
+                //-     button.btn.my-2#Button(type='button')
+                //-         a#fogA(href="") Tudjon meg tobbet
+        .container-fluid.d-flex.flex-column.flex-lg-row.flex-md-column.justify-content-evenly.text-center.align-content-center.flex-wrap.mt-3#gallery
+            img.mt-2(src="https://images.pexels.com/photos/8853525/pexels-photo-8853525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="")
+            img(src="https://images.pexels.com/photos/8853525/pexels-photo-8853525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="")
+            img(src="https://images.pexels.com/photos/8853525/pexels-photo-8853525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="")
+            //- img(src="https://images.pexels.com/photos/8853525/pexels-photo-8853525.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", alt="")
+        .container-fluid#footer
+            .container-fluid.d-flex.flex-lg-row.flex-column.justify-content-lg-evenly.justify-content-center
+                .container.d-flex.flex-row.justify-content-center.d-none
+                    //- h3.mt-3.ms-lg-5.text-lg-start.text-center
+                    //-     span No
+                    //-     span#So So
+                .container
+                .container.d-flex.flex-column.justify-content-between.my-3#contact
+                    h4.text-center#kapcs4 Kapcsolat
+                    .container.d-flex.flex-row.mt-2.justify-content-center#cttxt
+                        i.fa-solid.fa-envelope.me-1.pt-1
+                        span Email:
+                        a.ms-1(href="") pelda@gmail.com 
+                    .container.d-flex.flex-row.my-3.justify-content-center#cttxt
+                        i.fa-solid.fa-phone.me-1
+                        span Telefon:
+                        a.ms-1(href="") +36701234567
+                    .container.d-flex.flex-row.justify-content-center#cttxt
+                        i.fa-solid.fa-house.me-1.pt-1
+                        span Szekhely:
+                        a.ms-1(href="") Budapest, Varazs utca 12
+                .container.d-flex.flex-row.justify-content-center
+                    h3.mt-3.ms-lg-5.text-lg-start.text-center.d-none.d-lg-block
+                        span.text-center No
+                        span.text-center#So So
+                .container.d-flex.flex-column.justify-content-between.my-3
+                    h4.text-center Fedezze fel ezeket is
+                    .container.text-center#explorer
+                        a.h6(href="#about") Rolunk
+                    .container.text-center#explorer
+                        a.h6(href="#foglal") Tevekenysegeink
+                    .container.text-center#explorer
+                        a.h6#galleryBtn(href="#gallery") Referenciak
+                    .container.text-center#explorer
+                        a.h6#kontakt(href="#contact") Kontakt
+                .container.d-flex.flex-column.justify-content-end.pb-2
+                    .container.d-flex.flex-row.justify-content-center.justify-content-lg-end
+                        h6#copyright Sas Csanad

@@ -1,0 +1,105 @@
+doctype html
+html(lang="hu")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="icon", type="image/png" href="./assets/noso_logo2-remove.png")
+        title NoSo - Gepeszet
+
+        //- Bootstrap
+        link(rel="stylesheet", href="./css/bootstrap.css")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js")
+
+        //-  GSAP
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+
+        link(rel="stylesheet", href="./css/gepeszet.css")
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+            .container
+                a.navbar-brand(href='#')
+                    img(src="./assets/noso_logo2-remove.png", width=64, height=64 alt="")
+                button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                    span.navbar-toggler-icon
+                #navbarNav.collapse.navbar-collapse
+                    .container.d-flex.flex-row.justify-content-lg-end
+                        ul.navbar-nav
+                            li.nav-item#navs
+                                a.nav-link.active(aria-current='page' href='./index.html') Kezdőlap
+                            li.nav-item#navs
+                                a.nav-link.active(href='#inf') Info
+                            li.nav-item#navs
+                                a.nav-link.active(href='#footer') Kontakt
+        .container-fluid.d-flex.flex.column.flex-lg-row.text-light.justify-content-center#landing
+            .container.d-flex.align-items-center.flex-column.justify-content-center#Textbox
+                h1.text-center Gepeszet
+                h5.w-lg-50.text-center Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae inventore temporibus unde ex, officia soluta architecto distinctio culpa alias ratione?
+        .container-fluid.d-flex.flex-column.flex-lg-row.justify-content-center.text-center.mt-4#info
+            .container
+                h3.my-3.text-center Professzionalis Gepeszeti Munkak
+                .container.w-50#inf
+                    p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos illo, ducimus est nostrum quibusdam atque ipsa eum repudiandae perspiciatis voluptatem voluptatibus eveniet magni. Excepturi, atque.
+                .container-fluid.d-flex.flex-column.align-items-center
+                    .container-fluid.d-flex.flex-column.flex-lg-row.justify-content-evenly
+                        .container#image 
+                            img.my-1.rounded(src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80", alt="")
+                        .container#image 
+                            img.my-1.rounded(src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80", alt="")
+                        .container#image 
+                            img.my-1.rounded(src="https://images.unsplash.com/photo-1516216628859-9bccecab13ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80", alt="")
+                .container.mt-5#wrapperBox 
+                    h3 Ar ajanlat
+                    .container
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus impedit consectetur facere nam eligendi soluta omnis assumenda sed illum laudantium, id, doloremque, eius similique quae reprehenderit ut non aperiam illo
+            .container.mt-5
+                .container-fluid.d-flex.flex.column.justify-content-evenly.text-center
+                    form.d-flex.flex.row.justify-content-center#form(action="https://formsubmit.co/sascsani@gmail.com" method="POST") 
+                            h3.my-3 Kuldjon Emailt nekunk
+                            .container.mt-1
+                                input.text-center#name(type="text", name="name" placeholder="nev" required) 
+                            .container.mt-3
+                                input.text-center#email(type="email", name="email" placeholder="email" required) 
+                            .container.mt-3
+                                input.text-center#tel(type="tel", name="tel" placeholder="telefon" required)
+                            .container.mt-3
+                                input.text-center#targy(type="text", name="targy" placeholder="targy" required)
+                            .container.mt-3
+                                textarea#textarea(name="", cols="30", rows="10" placeholder='Uzenet' required)
+                            input(type="hidden" name="_captcha" value="false")
+                            button.btn.my-3#kuldes(type='submit') Kuldes
+        .container-fluid#footer
+            .container-fluid.d-flex.flex-lg-row.flex-column.justify-content-lg-evenly.justify-content-center
+                .container.d-flex.flex-row.justify-content-center.d-none
+                .container
+                .container.d-flex.flex-column.justify-content-between.my-3#contact
+                    h4.text-center#kapcs4 Kapcsolat
+                    .container.d-flex.flex-row.mt-2.justify-content-center#cttxt
+                        i.fa-solid.fa-envelope.me-1.pt-1
+                        span Email:
+                        a.ms-1(href="") pelda@gmail.com 
+                    .container.d-flex.flex-row.my-3.justify-content-center#cttxt
+                        i.fa-solid.fa-phone.me-1
+                        span Telefon:
+                        a.ms-1(href="") +36701234567
+                    .container.d-flex.flex-row.justify-content-center#cttxt
+                        i.fa-solid.fa-house.me-1.pt-1
+                        span Szekhely:
+                        a.ms-1(href="") Budapest, Varazs utca 12
+                .container.d-flex.flex-row.justify-content-center
+                    h3.mt-3.ms-lg-5.text-lg-start.text-center.d-none.d-lg-block
+                        span.text-center No
+                        span.text-center#So So
+                .container.d-flex.flex-column.justify-content-between.my-3
+                    h4.text-center Fedezze fel ezeket is
+                    .container.text-center#explorer
+                        a.h6(href="#about") Rolunk
+                    .container.text-center#explorer
+                        a.h6(href="#foglal") Tevekenysegeink
+                    .container.text-center#explorer
+                        a.h6#galleryBtn(href="#gallery") Referenciak
+                    .container.text-center#explorer
+                        a.h6#kontakt(href="#contact") Kontakt
+                .container.d-flex.flex-column.justify-content-end.pb-2
+                    .container.d-flex.flex-row.justify-content-center.justify-content-lg-end
+                        h6#copyright Sas Csanad
